@@ -20,14 +20,16 @@
     <body>
         <h1 class="text-center">DJANGO</h1>
         <div class="container">
-            {% for data in dara %}
+            {% for dataTitle, dataID in allData %}
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <a href="#" class="thumbnail">
                     <img class="img-responsive" src="https://d33np9n32j53g7.cloudfront.net/assets/stacks/djangostack/img/djangostack-stack-220x234-bc53c2056b36b44361d376ce93c2f8c5.png" alt="">
                 </a>
+                <p>{{dataID}}</p>
                 <p>
-                    {{data}}
+                    {{dataTitle}}
                 </p>
+                
             </div>
             {% endfor %}
         </div>

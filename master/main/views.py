@@ -10,8 +10,9 @@ def index(request):
     print (data)
     data_title = [];
     data_id = [];
+    main_data = zip(data_title, data_id)
     for i in data['movies']:
         data_id.append(i['id'])
-        data_title.append(i['id'] + " " + i['title'] + " " + i['releaseYear'])
+        data_title.append(i['title'] + " " + i['releaseYear'])
         print (i['title'])
-    return render(request, 'index.html', {'dara': data_title})
+    return render(request, 'index.html', {'allData': main_data})
